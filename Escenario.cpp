@@ -336,6 +336,13 @@ void Escenario:: moverBots(char direccion, bool invisible, int tipo /*1 = normal
 
 
 
-//Escenario:: ~Escenario(){
-
-//}
+bool Escenario:: jugadorPrincipal(){
+	for(int i=0; i < 11; i++){
+		for(int j=0; j < 13; j++){
+			if (typeid(*map[i][j]) == typeid(Jugador) && map[i][j]->getLetra() == 'j'){
+				return true;
+			}
+		}
+	}
+	return false;
+}

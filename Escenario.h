@@ -24,6 +24,7 @@ class Escenario{
 		bool movVal(int, int, int, int);
 		Item*** map;
 		void resetEstado();
+		bool jugadorPrincipal();
 };
 
 #endif
